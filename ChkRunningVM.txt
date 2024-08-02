@@ -1,0 +1,4 @@
+﻿Write-Host "`n>>> LAB status..." -ForegroundColor Yellow
+Write-Host "`nDevTest-BTDTS:" -ForegroundColor Green
+Write-Host "`nQBU-PM.RD.SBox.MMAD:" -ForegroundColor Green
+Write-Host "`nQBU-PM.RD.SBox.MigratorNotesExchange:" -ForegroundColor Green

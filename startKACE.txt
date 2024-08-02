@@ -1,0 +1,3 @@
+Restart-Service -Name AMPWatchDog
+Restart-Service -Name OfflineScheduler
+Restart-Service -Name konea

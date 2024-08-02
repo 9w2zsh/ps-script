@@ -1,0 +1,6 @@
+Stop-AzVM -ResourceGroupName "DEV4-RG" -Name "Dev4BTUsr1"
+Stop-AzVM -ResourceGroupName "DEV4-RG" -Name "Dev4SQL1"
+Stop-AzVM -ResourceGroupName "DEV4-RG" -Name "Dev4IIS"
+Stop-AzVM -ResourceGroupName "DEV4-RG" -Name "Dev4DOM10C"
+Stop-AzVM -ResourceGroupName "DEV4-RG" -Name "Dev4DOM11M"
+Stop-AzVM -ResourceGroupName "DEV4-RG" -Name "Dev4DC1"

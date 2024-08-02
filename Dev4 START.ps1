@@ -1,0 +1,7 @@
+Set-AzContext -Subscription "DevTest-BTDTS"
+Start-AzVM -name "Dev4DC1" -ResourceGroupName "DEV4-RG"
+Start-AzVM -name "Dev4DOM11M" -ResourceGroupName "DEV4-RG"
+Start-AzVM -name "Dev4DOM10C" -ResourceGroupName "DEV4-RG"
+Start-AzVM -name "Dev4IIS" -ResourceGroupName "DEV4-RG"
+Start-AzVM -name "Dev4SQL1" -ResourceGroupName "DEV4-RG"
+Start-AzVM -name "Dev4BTUsr1" -ResourceGroupName "DEV4-RG"

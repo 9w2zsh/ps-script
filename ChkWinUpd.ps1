@@ -1,0 +1,1 @@
+Get-WUlist -MicrosoftUpdate -AcceptAll

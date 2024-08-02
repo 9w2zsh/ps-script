@@ -1,0 +1,28 @@
+# Import necessary modules
+import pygame
+from pygame.locals import *
+from pytweening import easeInOutQuad
+
+# Initialize pygame
+pygame.init()
+
+# Define display dimensions
+width, height = 640, 480
+screen = pygame.display.set_mode((width, height))
+
+# Load number images
+number_images = []
+for i in range(10):
+    img = pygame.image.load(f'images/{i}.png')
+    number_images.append(img)
+
+# Define initial and final states of each number
+initial_states = [[i, 0] for i in range(10)]
+final_states = [[i, 1] for i in range(10)]
+
+# Define grid coordinates for each number
+grid_coordinates = [[100, 100], [100, 160], [100, 220],
+                     [100, 280], [100, 340],
+                     [100, 400], [100, 460],
+                     [100, 520], [100, 580],
+                     [100, 640]]

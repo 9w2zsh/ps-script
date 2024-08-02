@@ -1,0 +1,47 @@
+import time
+
+# Set the time of the watch
+hours = 23
+minutes = 45
+seconds = 0
+
+# Draw the watch face
+watch_face = [
+    '+-------+',
+    '|   {0} |'.format(str(hours).zfill(2)),
+    '| {0} |'.format(str(minutes).zfill(2)),
+    '| {0} |'.format(str(seconds).zfill(2)),
+    '+-------+',
+]
+
+# Print the watch face
+for line in watch_face:
+    print(line)
+
+# Keep updating the time every second
+while True:
+    # Get the current time
+    current_time = time.localtime()
+    
+    # Update the hours, minutes, and seconds
+    hours = current_time.tm_hour
+    minutes = current_time.tm_min
+    seconds = current_time.tm_sec
+    
+    # Clear the watch face
+    for _ in range(len(watch_face)):
+        print('\x1b[1A\x1b[2K', end='')
+    
+    # Redraw the watch face with the updated time
+    watch_face = [
+        '+-------+',
+        '|   {0} |'.format(str(hours).zfill(2)),
+        '| {0} |'.format(str(minutes).zfill(2)),
+        '| {0} |'.format(str(seconds).zfill(2)),
+        '+-------+',
+    ]
+    for line in watch_face:
+        print(line)
+    
+    # Wait for one second before updating the time again
+    time.sleep(1)
