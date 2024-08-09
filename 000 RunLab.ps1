@@ -18,7 +18,7 @@ elseif ($lab -eq "QA365D12") {
     $dc = "QA365D12DC1"
     $dom = "QA365D12DOM12M"
     $mne1 = "QA365D12MNE1"
-    $mne2 = ""
+    $mne2 = "QA365D12MNE2"
     $exch = ""
     $wks1 = ""
 }
