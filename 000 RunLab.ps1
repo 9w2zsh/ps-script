@@ -1,10 +1,9 @@
-﻿$deflab = "QA365"
-Set-AzContext -Subscription "DevTest-BTDTS" >$null
+﻿Set-AzContext -Subscription "DevTest-BTDTS" >$null
 
 Write-Host "`n>>> Enter the LAB name to RUN and press [Enter] ..." -ForegroundColor Yellow
-if (!($lab = Read-Host "1: [$deflab], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [DEV5], `n6: [ZSMNE], `n7: [JUMBOX] `nEnter number")) { $lab = $deflab }
+if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [DEV5], `n6: [ZSMNE], `n7: [JUMBOX] `nEnter number:")) { $lab = "1" }
 
-if ($lab -eq "1" -or "QA365") {
+if ($lab -eq "1") {
     $rg = "QA365-RG"
     $dc = "QA365DC1"
     $dom = "QA365DOM11M"
@@ -13,7 +12,7 @@ if ($lab -eq "1" -or "QA365") {
     $exch = ""
     $wks1 = "QA365BTUSR1"
 }
-elseif ($lab -eq 2 -or "QA365D12") {
+elseif ($lab -eq "2") {
     $rg = "QA365D12-RG"
     $dc = "QA365D12DC1"
     $dom = "QA365D12DOM12M"
@@ -22,7 +21,7 @@ elseif ($lab -eq 2 -or "QA365D12") {
     $exch = ""
     $wks1 = ""
 }
-elseif ($lab -eq "3" -or "QA2016") {
+elseif ($lab -eq "3") {
     $rg = "QA2016-RG"
     $dc = "QA2016DC1"
     $dom = "QA2016DOM9M"
@@ -31,7 +30,7 @@ elseif ($lab -eq "3" -or "QA2016") {
     $exch = "QA2016EXCH1"
     $wks1 = ""
 }
-elseif ($lab -eq "4" -or "QA2019") {
+elseif ($lab -eq "4") {
     $rg = "QA2019-RG"
     $dc = "QA2019DC1"
     $dom = "QA2019DOM9M"
@@ -40,7 +39,7 @@ elseif ($lab -eq "4" -or "QA2019") {
     $exch = "QA2019EXCH2"
     $wks1 = ""
 }
-elseif ($lab -eq "5" -or "ZSMNE") {
+elseif ($lab -eq "5") {
     $rg = "ZSMNE"
     $dc = "ZSMNEDC"
     $dom = "ZSMNEDOM12"
@@ -50,7 +49,7 @@ elseif ($lab -eq "5" -or "ZSMNE") {
     $wks1 = ""
     Set-AzContext -Subscription "QBU-PM.RD.SBox.MigratorNotesExchange" >$null
 }
-elseif ($lab -eq "6" -or "JUMBOX") {
+elseif ($lab -eq "6") {
     $rg = "ZS"
     $dc = ""
     $dom = ""
@@ -60,7 +59,7 @@ elseif ($lab -eq "6" -or "JUMBOX") {
     $wks1 = ""
     Set-AzContext -Subscription "QBU-PM.RD.SBox.MMAD" >$null
 }
-elseif ($lab -eq "7" -or "DEV5") {
+elseif ($lab -eq "7") {
     $rg = "DEV5-RG"
     $dc = "Dev5DC1"
     $dom = "Dev5DOM9M"
