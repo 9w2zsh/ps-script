@@ -1,6 +1,6 @@
 ﻿Set-AzContext -Subscription "DevTest-BTDTS" >$null
 
-Write-Host "`n>>> Enter the LAB name to RUN and press [Enter] ..." -ForegroundColor Yellow
+Write-Host "`n>>> Enter the LAB name to RUN and press [Enter] ..." -ForegroundColor Green
 if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [DEV5], `n6: [ZSMNE], `n7: [JUMBOX] `nEnter number:")) { $lab = "1" }
 
 if ($lab -eq "1") {
@@ -16,13 +16,8 @@ elseif ($lab -eq "2") {
     $rg = "QA365D12-RG"
     $dc = "QA365D12DC1"
     $dom = "QA365D12DOM12M"
-<<<<<<< HEAD
     $mne1 = "QA365D12MNE2"
     $mne2 = ""
-=======
-    $mne1 = "QA365D12MNE1"
-    $mne2 = "QA365D12MNE2"
->>>>>>> numbered-menu-lab
     $exch = ""
     $wks1 = ""
 }
