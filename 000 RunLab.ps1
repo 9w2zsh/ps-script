@@ -16,13 +16,9 @@ elseif ($lab -eq "2") {
     $rg = "QA365D12-RG"
     $dc = "QA365D12DC1"
     $dom = "QA365D12DOM12M"
-<<<<<<< HEAD
+    <<<<<<< HEAD
     $mne1 = "QA365D12MNE2"
     $mne2 = ""
-=======
-    $mne1 = "QA365D12MNE1"
-    $mne2 = "QA365D12MNE2"
->>>>>>> numbered-menu-lab
     $exch = ""
     $wks1 = ""
 }
