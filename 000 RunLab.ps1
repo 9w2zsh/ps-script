@@ -1,7 +1,7 @@
 ﻿Set-AzContext -Subscription "DevTest-BTDTS" >$null
 
 Write-Host "`n>>> Enter the LAB name to RUN and press [Enter] ..." -ForegroundColor Green
-if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [DEV5], `n6: [ZSMNE], `n7: [JUMBOX] `nEnter number:")) { $lab = "1" }
+if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [ZSMNE], `n6: [JUMBOX] `n7: [DEV5] `nEnter number:")) { $lab = "1" }
 
 if ($lab -eq "1") {
     $rg = "QA365-RG"
