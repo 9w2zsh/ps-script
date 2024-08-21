@@ -17,9 +17,9 @@ elseif ($lab -eq "2") {
     $dc = "QA365D12DC1"
     $dom = "QA365D12DOM12M"
     $mne1 = "QA365D12MNE2"
-    $mne2 = ""
+    $mne2 = "QA365D12MNE3"
     $exch = ""
-    $wks1 = ""
+    $wks1 = "QA365D12SSDM2"
 }
 elseif ($lab -eq "3") {
     $rg = "QA2016-RG"
