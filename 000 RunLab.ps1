@@ -1,4 +1,4 @@
-﻿Set-AzContext -Subscription "DevTest-BTDTS" >$null
+﻿Connect-AzAccount -Subscription "DevTest-BTDTS" >$null
 
 Write-Host "`n>>> Enter the LAB name to RUN and press [Enter] ..." -ForegroundColor Green
 if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [ZSMNE], `n6: [JUMBOX] `n7: [DEV5] `nEnter number:")) { $lab = "1" }
@@ -41,9 +41,9 @@ elseif ($lab -eq "4") {
 }
 elseif ($lab -eq "5") {
     $rg = "ZSMNE"
-    $dc = "ZSMNEDC"
-    $dom = "ZSMNEDOM12"
-    $mne1 = "ZSMNECON"
+    $dc = ""
+    $dom = ""
+    $mne1 = "ZSMNElab"
     $mne2 = ""
     $exch = ""
     $wks1 = ""
