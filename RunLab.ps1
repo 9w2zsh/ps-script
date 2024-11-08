@@ -20,7 +20,7 @@ if ($lab -eq "1") {
     }
 
     do {
-        $input = Read-Host "Enter VM to run and hit 'Enter' (type 'done' when finish)"  -ForegroundColor Yellow
+        $input = Read-Host "Enter VM to run and hit 'Enter' (type 'done' when finish)" -ForegroundColor Yellow
         if ($input -ne "done") {
             $labInput += $input
         }
