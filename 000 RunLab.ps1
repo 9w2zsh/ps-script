@@ -11,7 +11,7 @@ if ($lab -eq "1") {
     $mne1 = "QA365MNE1"
     $mne2 = "QA365MNE3"
     $exch = ""
-    $wks1 = "QA365BTUSR1"
+    $wks1 = "QA365BTUSR3"
 }
 elseif ($lab -eq "2") {
     $rg = "QA365D12-RG"
