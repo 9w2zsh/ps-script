@@ -16,7 +16,8 @@ if ($lab -eq "1") {
     $dom = "QA365DOM11M"
 
     for ($i = 0; $i -lt $qa365lab.Length; $i++) {
-        Write-Host "[$i]: $($qa365lab[$i])"
+        $pwrState = Get-AzVm -Name $($qa365lab[$i]) -Status | Select-Object Name, PowerState
+        Write-Host "[$i]: $($qa365lab[$i]): $($pwrState.PowerState)"
     }
 
     do {
