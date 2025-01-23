@@ -2,7 +2,7 @@
 Set-AzContext -Subscription "DevTest-BTDTS" >$null
 
 Write-Host "`n>>> Enter the LAB name to RUN and press [Enter] ..." -ForegroundColor Green
-if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2016], `n4: [QA2019], `n5: [ZSMNE], `n6: [JUMBOX] `n7: [DEV5] `nEnter number:")) { $lab = "1" }
+if (!($lab = Read-Host "1: [QA365], `n2: [QA365D12], `n3: [QA2019], `nEnter number:")) { $lab = "1" }
 
 if ($lab -eq "1") {
     $rg = "QA365-RG"
@@ -11,7 +11,7 @@ if ($lab -eq "1") {
     $dcstat = Get-AzVM -Name $dc -Status | Select-Object Name, PowerState
     if ($dcstat.PowerState -eq "VM deallocated") {
         Write-Output "`nStarting $($dc)"
-        Start-AzVM -Name $dc -ResourceGroupName $rg
+        Start-AzVM -Name $dc -ResourceGroupName $rg -NoWait
     }
     else { Write-Output "`n$($dc) already running" }
 }
@@ -22,7 +22,18 @@ elseif ($lab -eq "2") {
     $dcstat = Get-AzVM -Name $dc -Status | Select-Object Name, PowerState
     if ($dcstat.PowerState -eq "VM deallocated") {
         Write-Output "`nStarting $($dc)"
-        Start-AzVM -Name $dc -ResourceGroupName $rg
+        Start-AzVM -Name $dc -ResourceGroupName $rg -NoWait
+    }
+    else { Write-Output "`n$($dc) already running" }
+}
+elseif ($lab -eq "3") {
+    $rg = "QA2019-RG"
+    $dc = "QA2019DC1"
+    $vms = Get-AzVM -ResourceGroupName $rg
+    $dcstat = Get-AzVM -Name $dc -Status | Select-Object Name, PowerState
+    if ($dcstat.PowerState -eq "VM deallocated") {
+        Write-Output "`nStarting $($dc)"
+        Start-AzVM -Name $dc -ResourceGroupName $rg -NoWait
     }
     else { Write-Output "`n$($dc) already running" }
 }
